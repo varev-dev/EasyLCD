@@ -14,10 +14,10 @@
 #include "Axis.h"
 #include "Position.h"
 
-constexpr bool      DEFAULT_SCROLL = true;
-constexpr auto      DEFAULT_POSITION = Position(0, 0);
-constexpr DataType  DEFAULT_DATA_TYPE = FLOATING;
-constexpr Axis      DEFAULT_AXIS = UNDEFINED;
+constexpr auto DEFAULT_SCROLL = true;
+constexpr auto DEFAULT_POSITION = Position(0, 0);
+constexpr auto DEFAULT_DATA_TYPE = DataType::FLOATING;
+constexpr auto DEFAULT_AXIS = Axis::UNDEFINED;
 
 class Data final : public Renderable, public Scrollable {
 protected:

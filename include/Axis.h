@@ -5,7 +5,7 @@
 #ifndef AXIS_H
 #define AXIS_H
 
-enum Axis {
+enum class Axis {
     UNDEFINED,
     X_AXIS,
     Y_AXIS,

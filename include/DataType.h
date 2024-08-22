@@ -5,7 +5,7 @@
 #ifndef DATATYPE_H
 #define DATATYPE_H
 
-enum DataType {
+enum class DataType {
     FLOATING,
     ONE_LINER,
     FULL_SCALE
