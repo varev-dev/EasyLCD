@@ -7,10 +7,10 @@
 
 #include <LiquidCrystalDisplay.h>
 
-class Printable {
+class Renderable {
 public:
-    virtual ~Printable();
-    virtual void print(LiquidCrystalDisplay& lcd) const = 0;
+    virtual ~Renderable();
+    virtual void render(LiquidCrystalDisplay& lcd) const = 0;
 };
 
 #endif //PRINTABLE_H
