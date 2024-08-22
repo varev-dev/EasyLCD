@@ -12,17 +12,19 @@
 #include "Renderable.h"
 #include "Scrollable.h"
 #include "Axis.h"
+#include "Position.h"
 
 constexpr bool      DEFAULT_SCROLL = true;
-constexpr uint64_t  DEFAULT_POSITION = 0;
+constexpr auto      DEFAULT_POSITION = Position(0, 0);
 constexpr DataType  DEFAULT_DATA_TYPE = FLOATING;
+constexpr Axis      DEFAULT_AXIS = UNDEFINED;
 
 class Data final : public Renderable, public Scrollable {
 protected:
     std::string data;
     DataType type;
 
-    uint64_t position;
+    Position position;
     Axis scroll_axis;
     bool scrollable_;
 
@@ -30,8 +32,8 @@ public:
     Data();
     ~Data() override;
 
-    explicit Data(const std::string& data, DataType type = DEFAULT_DATA_TYPE, uint64_t position = DEFAULT_POSITION,
-                  bool scrollable = DEFAULT_SCROLL, Axis scroll_axis = UNDEFINED);
+    explicit Data(const std::string& data, DataType type = DEFAULT_DATA_TYPE, Position position = DEFAULT_POSITION,
+                  bool scrollable = DEFAULT_SCROLL, Axis scroll_axis = DEFAULT_AXIS);
 
     void setData(const std::string&);
     void setType(const DataType& type);
