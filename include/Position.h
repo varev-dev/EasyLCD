@@ -8,7 +8,7 @@
 #include <cstdint>
 
 class Position {
-private:
+protected:
     uint64_t x;
     uint64_t y;
 

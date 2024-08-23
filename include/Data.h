@@ -32,10 +32,10 @@ public:
     Data();
     ~Data() override;
 
-    explicit Data(const std::string& data, DataType type = DEFAULT_DATA_TYPE, Position position = DEFAULT_POSITION,
+    explicit Data(std::string  data, DataType type = DEFAULT_DATA_TYPE, const Position& position = DEFAULT_POSITION,
                   bool scrollable = DEFAULT_SCROLL, Axis scroll_axis = DEFAULT_AXIS);
 
-    void setData(const std::string&);
+    void setData(const std::string& data);
     void setType(const DataType& type);
 
     [[nodiscard]] std::string getData() const;
